@@ -1,0 +1,132 @@
+body {
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(35deg, #115093 50%, black 90%);
+    color: white;
+    padding: 10px;
+
+}
+
+nav > h1 {
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+nav button {
+    background: transparent;
+    color: white;
+    border: none;
+    border-bottom: 2px solid transparent;
+}
+
+nav button:hover {
+    cursor: pointer;
+    border-bottom: 2px solid white;
+    transition: border 1s;
+    transform: border;
+    transform-origin: left;
+}
+
+main {
+    margin: 5%;
+}
+
+.mainHeader {
+    min-height: 150px;
+}
+
+.mainHeader > div {
+    width: 150px;
+    float: left;
+    margin-right: 20px;
+    position: relative;
+    height: 100px;
+    overflow: hidden;
+}
+
+.mainHeader > div > img {
+    width: 100%;
+    position: absolute;
+}
+
+.mainHeader > div > img:nth-child(2) {
+    animation: fade1 20s infinite;
+}
+
+.mainHeader > div > img:nth-child(3) {
+    animation: fade2 20s infinite;
+}
+
+.mainHeader > div > img:nth-child(4) {
+    animation: fade3 20s infinite;
+}
+
+.mainHeader > div > img:nth-child(5) {
+    animation: fade4 20s infinite;
+}
+
+@keyframes fade1 {
+    0% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fade2 {
+    0% {
+        opacity: 1;
+    }
+    60% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fade3 {
+    0% {
+        opacity: 1;
+    }
+    30% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fade4 {
+    0% {
+        opacity: 1;
+    }
+    10% {
+        opacity: 1;
+    }
+    30% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.mainBody {
+    clear: both;
+}
