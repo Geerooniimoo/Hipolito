@@ -1,49 +1,5 @@
-Chat history
-New Chat
-Close sidebar
-Today
 Legacy WAN vs SD-WAN
 
-
-Previous 7 Days
-Network Solutions Overview
-Previous 30 Days
-Clip Spill from Image
-September
-Move div using keyframes.
-August
-Father Seeking Custody Advice
-June
-HTML & CSS Navigation.
-Bash System Variables List
-CPU status with Bash
-May
-Define RMSE Metric
-Inferential vs Predictive Linear Regression.
-Create R Dataframe.
-Y-hat Formula Summary
-Create DataFrame table.
-April
-Lawsuit for Oil Leak
-Wolfspeed Developer Interview.
-Meaning of "?"
-March
-HTML/CSS - Multiple Checked Radios
-Heroku with JawsDB and Sequelize.
-Change Radio Button Color.
-Overview of SAP
-Fix ESLint Constructor Error.
-Boxplot outlier symbol.
-Babysitting Rate Guidelines.
-Upgrade to Plus
-
-User
-Geronimo Perez
-Default (GPT-3.5)
-
-User
-legacy WAN vs DS WAN
-ChatGPT
 Legacy WAN (Wide Area Network) and SD-WAN (Software-Defined Wide Area Network) are two different approaches to connecting geographically dispersed networks and devices. Let me explain each one briefly:
 
 Legacy WAN:
