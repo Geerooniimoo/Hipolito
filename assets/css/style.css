@@ -1,6 +1,8 @@
-/* * {
-    transition: all 1s;
-} */
+:root {
+    --height1: 20vh;
+    --height2: 20vh;
+    --height3: 20vh;
+}
 
 body {
     margin: 0;
@@ -45,22 +47,27 @@ nav button:hover {
     transform-origin: left;
 }
 
-.sdwan {
+.sdwan, .cyberSec, .contact {
     background: #f9dedc;
     color: #410e0b;
     color: black;
     margin: 0;
+    width: 100%;
+    /* padding: 10px 5%; */
+    opacity: 0;
+    position: absolute;
+}
+
+.sdwan > p, .cyberSec > p {
     width: 95%;
-    margin-left: 0;
-    opacity: 0.85;
-    height: 0;
-    overflow: hidden;
+    margin: 15px auto;
 }
 
 .showInfo {
-    height: fit-content;
-    padding: 15px 5%;
-    animation: showInfo 1s;
+    position: unset;
+    opacity: 0.85;
+    animation: showInfo 1s ease-in-out;
+    overflow: hidden;
 }
 
 @keyframes showInfo {
@@ -68,7 +75,25 @@ nav button:hover {
         height: 0;
     }
     100% {
-        height: 5vh;
+        height: var(--height1);
+    }
+}
+
+.hideInfo {
+    animation: hideInfo 1s ease-in-out;
+    overflow: hidden;
+}
+
+@keyframes hideInfo {
+    0% {
+        position: unset;
+        opacity: .85;
+        height: var(--height2);
+    }
+    100% {
+        position: unset;
+        opacity: .85;
+        height: 0;
     }
 }
 
