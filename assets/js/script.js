@@ -1,25 +1,34 @@
+let el,dsp,height;
 let rt = document.querySelector(':root');
-let sd = document.querySelector('.sdwan');
-let cyber = document.querySelector('.cyberSec');
-let cnt = document.querySelector('.contact');
+
+let showDsp = () => {
+    el.classList.toggle('hideInfo',false);
+    el.classList.toggle('showInfo',true);
+};
+
+let hideDsp = async () => {
+    dsp.classList.toggle('showInfo',false);
+    dsp.classList.toggle('hideInfo',true);
+};
+
+let hideNshow = () => {
+    hideDsp();
+    setTimeout(showDsp,500);
+};
 
 window.onclick = ({target:{id}}) => {
-    let el = document.querySelector(`.${id}`)
-    let height1 = `${cyber.offsetHeight}px`;
-    let height2 = `${sd.offsetHeight}px`;
-    let height3 = `${cnt.offsetHeight}px`;
+    el = document.querySelector(`.${id}`);
 
-    rt.style.setProperty('--height1', height1);
-    rt.style.setProperty('--height2', height2);
-    rt.style.setProperty('--height3', height3);
+    height = `${el.offsetHeight}px`;
+    rt.style.setProperty('--height1', height);
     
-    if(document.querySelector('.showInfo')) {
-        document.querySelector('.showInfo').classList.toggle('hideInfo');
-        return setTimeout(()=>{
-            document.querySelector('.showInfo').classList.toggle('showInfo');
-            el.classList.toggle('showInfo')
-        },1000);
+    dsp = document.querySelector('.showInfo') || false;
+
+    if(!dsp) showDsp();
+    
+    if(dsp) {
+        rt.style.setProperty('--height2', `${dsp.offsetHeight}px`);
+        if(el==dsp) hideDsp();
+        if(el!=dsp) hideNshow();
     };
-    
-    el.classList.toggle('showInfo')
 };

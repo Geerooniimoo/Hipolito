@@ -1,7 +1,6 @@
 :root {
-    --height1: 20vh;
-    --height2: 20vh;
-    --height3: 20vh;
+    --height1: 10vh;
+    --height2: 10vh;
 }
 
 body {
@@ -18,11 +17,16 @@ nav {
     color: white;
     padding: 10px;
     border-bottom: 1px solid #000;
+    height: 7vh;
+    align-content: space-between;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 nav > h1 {
     margin: 0;
-    margin-bottom: 5px;
+    text-align: center;
+    font-size: 1.5rem;
 }
 
 nav > div {
@@ -58,7 +62,7 @@ nav button:hover {
     position: absolute;
 }
 
-.sdwan > p, .cyberSec > p {
+.sdwan > p, .cyberSec > p, .contact > p {
     width: 95%;
     margin: 15px auto;
 }
@@ -66,7 +70,7 @@ nav button:hover {
 .showInfo {
     position: unset;
     opacity: 0.85;
-    animation: showInfo 1s ease-in-out;
+    animation: showInfo .5s ease-in-out;
     overflow: hidden;
 }
 
@@ -80,8 +84,10 @@ nav button:hover {
 }
 
 .hideInfo {
-    animation: hideInfo 1s ease-in-out;
+    opacity: 0;
     overflow: hidden;
+    position: absolute;
+    animation: hideInfo .5s ease-in-out;
 }
 
 @keyframes hideInfo {
