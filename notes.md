@@ -15,6 +15,9 @@ two services
 - Data Center
 
 Website: https://hispanicfemalenetworksolutions.com/
+login: www.goDaddy.com
+user: hifenet_godaddy
+pwd: Geronimo123!@!
 
 Logo
 HifeNetS
