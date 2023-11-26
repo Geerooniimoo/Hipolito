@@ -5,9 +5,88 @@
 
 body {
     margin: 0;
-    background: #c7e9fa;
+    /* background: #c7e9fa; */
     color: black;
 }
+
+.container {
+    height: 50vh;
+    margin: 0 auto;
+    background: white;
+    padding: 5px;
+    border-radius: 8px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('../images/network3.jpeg');
+}
+
+.container > h2 {
+    margin: 0 auto;
+    height: 40vh;
+    color: white;
+}
+
+#main {
+    color: white;
+    font-size: 2.4rem;
+    font-family: fantasy;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+#aboutDiv2 {
+    font-size: 1.7rem;
+    color: gray;
+    font-family: serif;
+    width: fit-content;
+    margin: 5vh auto;
+    animation: aboutDiv2 .5s;
+}
+
+.hide {
+    display: none;
+}
+
+@keyframes aboutDiv2 {
+    0% {
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0;
+        position: relative;
+        top: 200px;
+    }
+
+    11% {
+        opacity: 1;
+        position: relative;
+        top: 200px;
+    }
+    
+    100% {
+        position: relative;
+        top: 0;
+    }
+}
+
+.aboutNav {
+    background: transparent;
+    border: none;
+}
+
+.aboutNav button {
+    color: gray;
+    font-family: fantasy;
+    border-bottom: 4px solid transparent;
+    font-size: 1.5rem;
+}
+
+.aboutNav button:focus, .aboutNav button:hover {
+    color: #000;
+    border-bottom: 4px solid red;
+}
+
 
 nav {
     display: flex;
@@ -45,7 +124,6 @@ nav button {
 
 nav button:hover {
     cursor: pointer;
-    border-bottom: 2px solid white;
     transition: border 1s;
     transform: border;
     transform-origin: left;
