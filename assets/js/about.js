@@ -1,10 +1,19 @@
 window.onclick = ({target}) => {
-    console.log(target);
-    if(target == whoWeAre) {
-        console.log('clicked');
-        aboutDiv2.classList.toggle('hide')
-    }
-    
-    return console.log('clicked');
-    console.log(id);
-}    
+    if([whoWeAre,whatWeDo,leadership].includes(target)) {
+
+        let div = target == whoWeAre ? aboutDiv1 : target == whatWeDo ? aboutDiv2 : aboutDiv3;
+
+        document.querySelectorAll('.active').forEach(el=>el.classList.toggle('notActive',true));
+        document.querySelectorAll('.active').forEach(el=>el.classList.toggle('active',false));
+        document.querySelectorAll('.slideUp').forEach(el=>el.classList.toggle('slideUp',false));
+        
+        [aboutDiv1,aboutDiv2,aboutDiv3].forEach(el=>el.classList.toggle('hide',true));
+        [aboutDiv1,aboutDiv2,aboutDiv3].forEach(el=>el.classList.toggle('sliceUp',false));
+
+        target.classList.toggle('active',true);
+        target.classList.toggle('notActive',false);
+
+        div.classList.toggle('hide', false);
+        div.classList.toggle('slideUp', true);
+    };
+};    

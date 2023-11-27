@@ -1,6 +1,12 @@
-:root {
-    --height1: 10vh;
-    --height2: 10vh;
+.container {
+    height: 50vh;
+    margin: 0 auto;
+    background: white;
+    padding: 5px;
+    border-radius: 8px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('../images/network3.jpeg');
 }
 
 body {
@@ -20,23 +26,30 @@ body {
     font-size: 2.4rem;
     font-family: fantasy;
     width: fit-content;
-    margin: 0 auto;
+    margin: 15vh auto;
 }
 
-#aboutDiv2 {
+.slideUpDiv {
+    width: 60%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.slideUp {
+    display: block;
     font-size: 1.7rem;
     color: gray;
     font-family: serif;
     width: fit-content;
     margin: 5vh auto;
-    animation: aboutDiv2 .5s;
+    animation: slideUp .5s;
 }
 
 .hide {
     display: none;
 }
 
-@keyframes aboutDiv2 {
+@keyframes slideUp {
     0% {
         opacity: 0;
     }
@@ -64,16 +77,20 @@ body {
     border: none;
 }
 
-.aboutNav button {
+.notActive {
     color: gray;
     font-family: fantasy;
     border-bottom: 4px solid transparent;
     font-size: 1.5rem;
 }
 
-.aboutNav button:focus, .aboutNav button:hover {
+.active, .notActive:hover {
     color: #000;
+    font-family: fantasy;
+    border: unset;
     border-bottom: 4px solid red;
+    font-size: 1.5rem;
+    transition: all 1s;
 }
 
 
@@ -107,67 +124,6 @@ nav button {
     background: transparent;
     color: white;
     border: none;
-    border-bottom: 2px solid transparent;
-    border-bottom: 1px solid white;
-}
-
-nav button:hover {
-    cursor: pointer;
-    transition: border 1s;
-    transform: border;
-    transform-origin: left;
-}
-
-.sdwan, .cyberSec, .contact {
-    background: #f9dedc;
-    color: #410e0b;
-    color: black;
-    margin: 0;
-    width: 100%;
-    /* padding: 10px 5%; */
-    opacity: 0;
-    position: absolute;
-}
-
-.sdwan > p, .cyberSec > p, .contact > p {
-    width: 90%;
-    margin: 15px auto;
-}
-
-.showInfo {
-    position: unset;
-    opacity: 0.85;
-    animation: showInfo .5s ease-in-out;
-    overflow: hidden;
-}
-
-@keyframes showInfo {
-    0% {
-        height: 0;
-    }
-    100% {
-        height: var(--height1);
-    }
-}
-
-.hideInfo {
-    opacity: 0;
-    overflow: hidden;
-    position: absolute;
-    animation: hideInfo .5s ease-in-out;
-}
-
-@keyframes hideInfo {
-    0% {
-        position: unset;
-        opacity: .85;
-        height: var(--height2);
-    }
-    100% {
-        position: unset;
-        opacity: .85;
-        height: 0;
-    }
 }
 
 main {

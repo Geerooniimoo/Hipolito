@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/about.css">
     <title>About Us</title>
 </head>
 
@@ -13,14 +13,13 @@
         <h1>HIFENETS</h1>
         <div class="links">
             <a style="border-bottom:1px solid white;color:white;text-decoration: none;" href="index.html">Home</a>
-            <button id="cyberSec">Cyber Security</button>
-            <button id="sdwan">SDWAN</button>
+            <!-- <button id="cyberSec">Cyber Security</button> -->
+            <!-- <button id="sdwan">SDWAN</button> -->
             <a style="border-bottom:1px solid white;color:white;text-decoration: none;" href="about.html">About Us</a>
         </div>
     </nav>
 
     <div class="container">
-        <h3>About Us</h3>
         <div id="main">
             Our mission is to help enterprises organize<br>
             a security strategy that can address <br>
@@ -28,17 +27,34 @@
         </div>
     </div>
     <nav class="aboutNav">
-        <button id="whoWeAre">Who We Are</button>
-        <button id="whatWeDo">What We Do</button>
-        <button id="leadership">Leadership</button>
+        <button id="whoWeAre" class="active">Who We Are</button>
+        <button id="whatWeDo" class="notActive">What We Do</button>
+        <button id="leadership" class="notActive">Leadership</button>
     </nav>
 
-    <div id="aboutDiv2">
-        Hispanic Female Network Solutions (HIFENET),<br>
-        a minority company founded in Delaware,<br>
-        specializes in IT technologies and Network security.
+    <div class="slideUpDiv">
+
+        <div id="aboutDiv1" class="slideUp">
+            Hispanic Female Network Solutions (HIFENET),<br>
+            a minority company founded in Delaware,<br>
+            specializes in IT technologies and Network security.
+        </div>
+
+        <div id="aboutDiv2" class="hide">
+            <h3 style="margin-bottom: 2px;">We span a collection of Networking Solutions</h3>
+            Our certified employees have expertise in networking and cloud infrastructure
+            from recognized technology vendors, including Cisco, Juniper, VMWare, Fortinet.
+            Our operations include WAN/LAN, SDWAN, wireless, VoIP, Security,
+            and coding in popular programming languages, Python and Linux.
+
+        </div>
+
+        <div id="aboutDiv3" class="hide">
+            Pictures and Job Positions
+        </div>
     </div>
 
     <script src="./assets/js/about.js"></script>
 </body>
+
 </html>
