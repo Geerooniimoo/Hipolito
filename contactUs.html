@@ -13,11 +13,8 @@
     <nav>
         <h1>HIFENETS</h1>
         <div class="links">
-            <a style="border-bottom:1px solid white;color:white;text-decoration: none;" href="index.html">Home</a>
-            <!-- <button id="cyberSec">Cyber Security</button>
-            <button id="sdwan">SDWAN</button> -->
-            <a style="border-bottom:1px solid white;color:white;text-decoration: none;" href="contactUs.html">Contact
-                Us</a>
+            <a style="border-bottom:1px solid white;color:white;text-decoration:none;font-size: 1.5rem;" href="index.html">Home</a>
+            <a style="border-bottom:1px solid white;color:white;text-decoration:none;font-size: 1.5rem;" href="contactUs.html">Contact Us</a>
         </div>
     </nav>
 
@@ -32,29 +29,39 @@
             <h4>Fill out the form to get in touch with our Sales Team</h4>
 
             <div class="col1">
-                <label for="firstName">First Name</label>
-                <input id="firstName" type="text">
-
-                <label for="lastName">Last Name</label>
-                <input id="lastName" type="text">
-
-                <label for="email">Email</label>
-                <input id="email" type="text">
+                <div>
+                    <label for="firstName">First Name</label>
+                    <input placeholder="John" id="firstName" type="text">
+                </div>
+                
+                <div>
+                    <label for="email">Email</label>
+                    <input placeholder="jDoe@yourDomain.com" id="email" type="text">
+                </div>
+                <div>
+                    <label for="company">Company</label>
+                    <input placeholder="yourCompany" id="company" type="text">
+                </div>
             </div>
-
+            
             <div class="col2">
-                <label for="company">Company</label>
-                <input id="company" type="text">
-
-                <label for="phone">Phone</label>
-                <input id="phone" type="text">
-
-                <label for="products">Product of interest</label>
-                <input id="products" type="text">
+                <div>
+                    <label for="lastName">Last Name</label>
+                    <input placeholder="Doe" id="lastName" type="text">
+                </div>
+                <div>
+                    <label for="phone">Phone</label>
+                    <input placeholder="1(234) 234-5678" id="phone" type="tel">
+                </div>
+                <div>
+                    <label for="products">Product of interest</label>
+                    <input placeholder="Security" id="products" type="text">
+                </div>
             </div>
-
-            <label for="help">How can we help?</label>
-            <input id="help" type="text">
+            <div class="textarea">
+                <label for="help">How can we help?</label>
+                <textarea name="help" id="help" placeholder="message"></textarea>
+            </div>
 
             <input type="submit">
         </form>

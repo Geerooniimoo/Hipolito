@@ -1,34 +1,19 @@
-let el,dsp,height;
-let rt = document.querySelector(':root');
+window.onclick = ({target}) => {
+    if([whoWeAre,whatWeDo,leadership].includes(target)) {
 
-let showDsp = () => {
-    el.classList.toggle('hideInfo',false);
-    el.classList.toggle('showInfo',true);
-};
+        let div = target == whoWeAre ? aboutDiv1 : target == whatWeDo ? aboutDiv2 : leaderDiv;
 
-let hideDsp = async () => {
-    dsp.classList.toggle('showInfo',false);
-    dsp.classList.toggle('hideInfo',true);
-};
+        document.querySelectorAll('.active').forEach(el=>el.classList.toggle('notActive',true));
+        document.querySelectorAll('.active').forEach(el=>el.classList.toggle('active',false));
+        document.querySelectorAll('.slideUp').forEach(el=>el.classList.toggle('slideUp',false));
+        
+        [aboutDiv1,aboutDiv2,leaderDiv].forEach(el=>el.classList.toggle('hide',true));
+        [aboutDiv1,aboutDiv2,leaderDiv].forEach(el=>el.classList.toggle('sliceUp',false));
 
-let hideNshow = () => {
-    hideDsp();
-    setTimeout(showDsp,500);
-};
+        target.classList.toggle('active',true);
+        target.classList.toggle('notActive',false);
 
-window.onclick = ({target:{id}}) => {
-    el = document.querySelector(`.${id}`);
-
-    height = `${el.offsetHeight}px`;
-    rt.style.setProperty('--height1', height);
-    
-    dsp = document.querySelector('.showInfo') || false;
-
-    if(!dsp) showDsp();
-    
-    if(dsp) {
-        rt.style.setProperty('--height2', `${dsp.offsetHeight}px`);
-        if(el==dsp) hideDsp();
-        if(el!=dsp) hideNshow();
+        div.classList.toggle('hide', false);
+        div.classList.toggle('slideUp', true);
     };
-};
+};    
