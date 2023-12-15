@@ -17,3 +17,5 @@ window.onclick = ({target}) => {
         div.classList.toggle('slideUp', true);
     };
 };    
+
+
