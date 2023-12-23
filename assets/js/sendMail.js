@@ -5,7 +5,8 @@ submit.onclick = e => {
 
     Email.send({
         SecureToken: "984b5335-048f-484a-95e8-3584fc750e32",
-        To: 'biondar@hispanicfemalenetworksolutions.com',
+        // To: 'biondar@hispanicfemalenetworksolutions.com',
+        To: 'romero.hipolito@gmail.com',
         From: "Geronimo.Perez4@Gmail.com",
         Subject: "Potential client",
         Body: `

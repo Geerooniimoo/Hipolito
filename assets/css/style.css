@@ -1,6 +1,4 @@
 
-
-
 .container {
     height: 50vh;
     margin: 0 auto;
@@ -35,7 +33,10 @@ body {
 .slideUpDiv {
     width: fit-content;
     margin: 0 auto;
-    /* overflow: hidden; */
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    transition: all 5s;
 }
 
 .slideUp {
@@ -48,17 +49,38 @@ body {
     animation: slideUp .5s;
 }
 
+.topFixed {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    background: white !important;
+    width: 100%;
+}
+
+#aboutDiv1 {
+    height: 30vh;
+    font-size: 2.5rem;
+    display: flex;
+    align-items: center;
+}
+
 #aboutDiv2 {
+    display: flex;
+    height: 40vh;
+    align-items: center;
     width: 60%;
 }
 
 #leaderDiv {
+    align-items: center;
+    width: 60%;
     justify-content: space-between;
     min-width: 750px;
+    height: 60vh;
 }
 
 #leaderDiv > div {
-    width: 30%;
+    width: 20%;
     text-align: center;
     min-width: 250px;
 }
@@ -66,7 +88,6 @@ body {
 #leaderDiv > div > img {
     width: 100%;
     border-radius: 50%;
-    max-width: 200px;
 }
 
 .hide {
@@ -96,9 +117,13 @@ body {
     }
 }
 
-.aboutNav {
+#aboutNav {
     background: transparent;
     border: none;
+}
+
+#aboutNav a {
+    text-decoration: none;
 }
 
 .notActive {
@@ -324,6 +349,6 @@ li:active>ul, li:hover>ul {
 
     .mainHeader > div {
         width: 100%;
-        height: 50vh;
+        height: 35vh;
     }
 }

@@ -55,7 +55,16 @@
                 </div>
                 <div>
                     <label for="products">Product of interest</label>
-                    <input placeholder="Security" id="products" type="text">
+                    <br>
+                    <select id="products">
+                        <option>None</option>
+                        <option>Infrastructure Ethernet Cabling Fiber/Copper</option>
+                        <option>Private Cloud Infrastructure</option>
+                        <option>Wireless Infrastructure Design</option>
+                        <option>Cyber Security Consultancy</option>
+                        <option>Legacy to SDWAN Network Migration</option>
+                        <option>VoIP Infrastructure Design</option>
+                    </select>
                 </div>
             </div>
             <div class="textarea">
@@ -66,8 +75,6 @@
             <input id="submit" type="submit">
         </form>
     </main>
-
-    <button id="sendMail" style="background:green;color:white">Send Email</button>
 
     <script src="https://smtpjs.com/v3/smtp.js">
     </script>

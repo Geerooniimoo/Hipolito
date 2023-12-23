@@ -60,3 +60,9 @@ input[type="submit"] {
         font-weight: 900;
         border-radius: 8px;
 }
+
+select {
+    font-size: 1.5rem;
+    height: 55px;
+    padding: 5px;
+}
